@@ -1,4 +1,5 @@
 package B::OPCheck;
+# ABSTRACT: PL_check hacks using Perl callbacks
 
 use 5.008;
 
@@ -47,10 +48,6 @@ sub unimport {
 __END__
 
 =pod
-
-=head1 NAME
-
-B::OPCheck - PL_check hacks using Perl callbacks
 
 =head1 SYNOPSIS
 
@@ -106,19 +103,4 @@ handling completely.
 
 =back
 
-=head1 AUTHORS
-
-Chia-liang Kao E<lt>clkao@clkao.orgE<gt>
-Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
-
-=head1 COPYRIGHT
-
-Copyright 2008 by Chia-liang Kao, Yuval Kogman
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-See L<http://www.perl.com/perl/misc/Artistic.html>
-
 =cut
-
