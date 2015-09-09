@@ -9,7 +9,7 @@ use Carp;
 use XSLoader;
 use Scalar::Util;
 use Scope::Guard;
-use B::Utils ();
+use B::Utils 0.08 ();
 
 our $VERSION = '0.30';
 

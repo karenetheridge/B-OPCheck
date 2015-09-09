@@ -1,22 +1,19 @@
 use strict;
-use ExtUtils::Depends;
-use inc::Module::Install 0.91;
+use warnings;
 
-name        'B-OPCheck';
-all_from    'lib/B/OPCheck.pm';
+use lib 'inc';
+use ExtUtils::MakeMaker::Dist::Zilla::Develop;
 
-configure_requires 'B::Utils' => 0.08;
-#minimum version that depends on ExtUtils::Depends 0.302
-configure_requires 'ExtUtils::Depends' => 0.302; #minimum version that works on Win32+gcc
+use ExtUtils::Depends 0.302;
 
-requires 'B::Utils' => 0.08;
-requires 'Scope::Guard';
-requires 'XSLoader';
-build_requires 'Test::More';
+# keep this code consistent with the [MakeMaker::Awesome] arguments in dist.ini
+my $pkg = ExtUtils::Depends->new('B::OPCheck', 'B::Utils');
 
-repository 'git://github.com/rafl/b-opcheck.git';
+WriteMakefile(
+    NAME => 'B::OPCheck',
+    VERSION_FROM => 'lib/B/OPCheck.pm',
+    INSTALLMAN1DIR => 'none',
+    INSTALLMAN3DIR => 'none',
+    $pkg->get_makefile_vars,
+);
 
-my $bc = ExtUtils::Depends->new("B::OPCheck", "B::Utils");
-makemaker_args($bc->get_makefile_vars);
-
-sign; WriteAll;
