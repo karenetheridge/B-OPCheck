@@ -1,6 +1,7 @@
 Revision history for B-OPCheck
 
 {{$NEXT}}
+  - use ppport.h to handle removal of op_sibling in perl 5.25.1
 
 0.30      2015-09-09 02:06:45Z
   - modernize the tooling

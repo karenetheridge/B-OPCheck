@@ -19,3 +19,5 @@ WriteMakefile(
     $pkg->get_makefile_vars,
 );
 
+use Devel::PPPort 3.3202;
+Devel::PPPort::WriteFile();

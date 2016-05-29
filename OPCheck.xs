@@ -114,11 +114,11 @@ OP *OPCHECK_ck_subr(pTHX_ OP *o) {
         AV *subs;
 
         if ( opnum == OP_ENTERSUB ) {
-            OP *prev = ((cUNOPo->op_first->op_sibling) ? cUNOPo : ((UNOP*)cUNOPo->op_first))->op_first;
-            OP *o2 = prev->op_sibling;
+            OP *prev = ((OpSIBLING(cUNOPo->op_first)) ? cUNOPo : ((UNOP*)cUNOPo->op_first))->op_first;
+            OP *o2 = OpSIBLING(prev);
             OP *cvop;
 
-            for (cvop = o2; cvop->op_sibling; cvop = cvop->op_sibling);
+            for (cvop = o2; OpSIBLING(cvop); cvop = OpSIBLING(cvop));
 
             if (cvop->op_type == OP_METHOD_NAMED) {
                 const char * meth = SvPVX_const(((SVOP *)cvop)->op_sv);
