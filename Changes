@@ -1,6 +1,7 @@
 Revision history for B-OPCheck
 
 {{$NEXT}}
+  - use correct macro for the existence of op_sibling (perl 5.25.1+)
 
 0.31      2016-06-13 05:27:37Z
   - use ppport.h to handle removal of op_sibling in perl 5.25.1

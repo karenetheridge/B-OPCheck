@@ -114,7 +114,7 @@ OP *OPCHECK_ck_subr(pTHX_ OP *o) {
             OP *o2 = OpSIBLING(prev);
             OP *cvop;
 
-            for (cvop = o2; OpSIBLING(cvop); cvop = OpSIBLING(cvop));
+            for (cvop = o2; OpHAS_SIBLING(cvop); cvop = OpSIBLING(cvop));
 
             if (cvop->op_type == OP_METHOD_NAMED) {
                 const char * meth = SvPVX_const(((SVOP *)cvop)->op_sv);
