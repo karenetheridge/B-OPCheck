@@ -8,7 +8,7 @@ B::OPCheck - PL_check hacks using Perl callbacks
 
 =head1 VERSION
 
-version 0.30
+version 0.31
 
 =head1 SYNOPSIS
 
@@ -85,17 +85,17 @@ Chia-liang Kao <clkao@clkao.org>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Florian Ragwitz Karen Etheridge Alexandr Ciornii
+=for stopwords Karen Etheridge Florian Ragwitz Alexandr Ciornii
 
 =over 4
 
 =item *
 
-Florian Ragwitz <rafl@debian.org>
+Karen Etheridge <ether@cpan.org>
 
 =item *
 
-Karen Etheridge <ether@cpan.org>
+Florian Ragwitz <rafl@debian.org>
 
 =item *
 

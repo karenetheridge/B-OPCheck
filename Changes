@@ -1,6 +1,6 @@
 Revision history for B-OPCheck
 
-{{$NEXT}}
+0.31      2016-06-13 05:27:37Z
   - use ppport.h to handle removal of op_sibling in perl 5.25.1
   - remove redundant Perl_check_t definition (RT#57356)
 
