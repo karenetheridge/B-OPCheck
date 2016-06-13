@@ -12,7 +12,7 @@ use Scalar::Util;
 use Scope::Guard;
 use B::Utils 0.08 ();
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 
 XSLoader::load 'B::OPCheck', $VERSION;
 
