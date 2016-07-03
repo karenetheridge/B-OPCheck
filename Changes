@@ -1,5 +1,7 @@
 Revision history for B-OPCheck
 
+{{$NEXT}}
+
 0.32      2016-07-03 17:48:00Z
   - use correct macro for the existence of op_sibling (perl 5.25.1+)
 
