@@ -31,6 +31,8 @@ perl:
   - "5.10-thr"
   - "5.8"
   - "5.8-thr"
+matrix:
+  fast_finish: 1
 env:
   global:
     - AUTHOR_TESTING=1
